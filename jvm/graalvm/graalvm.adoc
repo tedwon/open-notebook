@@ -1,0 +1,36 @@
+:toc:
+
+== GraalVM
+
+https://www.graalvm.org/
+
+* GraalVM is a universal virtual machine
+** for running applications written in 
+*** JavaScript, Python, Ruby, R, 
+*** JVM-based languages like Java, Scala, Groovy, Kotlin, Clojure, and
+*** LLVM-based languages such as C and C++.
+
+
+== Quarkus Demo
+https://docs.google.com/presentation/d/1w4joOZGcWw7-cY5tGEo1ltl3O-Cq199t3dj762N-6bw/edit?usp=sharing
+
+* You can refer to Quarkus as a GraalVM use case.
+* Quarkus tailors an application for GraalVM and HotSpot.
+** https://quarkus.io/
+
+
+== Cloud Native Java:GraalVM (@Oracle Developer Meetup)
+
+Introduce GraalVM from Oracle engineer, Taewan Kim
+
+* Slide: https://www.slideshare.net/taewanme/cloud-native-javagraalvm
+
+* Video: http://taewan.kim/post/graalvm_seminar/
+
+* Example: https://github.com/taewanme/graalvm_seminar_examples
+
+* Why GraalVM: http://taewan.kim/post/position_of_graalvm/
+
+
+== Learning to Use the GraalVM - DZone Java
+* https://dzone.com/articles/learning-to-use-the-graalvm
