@@ -1,0 +1,31 @@
+= On Fedora Workstation
+
+== How to take screenshots
+* Go to search bar
+* Find screenshot
+
+
+== Fedora Productivity Tools
+* https://www.dedoimedo.com/computers/fedora-30-after-install.html
+* https://blog.hubstaff.com/11-linux-productivity-tools/
+* https://www.dedoimedo.com/computers/gnome-customization.html
+* https://www.dedoimedo.com/computers/gnome-edit-theme.html
+* https://gitlab.com/LinxGem33/Arc-Menu
+
+
+== How to change the color of your Linux terminal | Opensource.com
+https://opensource.com/article/19/9/linux-terminal-colors
+
+
+== How to install OpenJDK 8 on Fedora
+[source,sh,options="nowrap"]
+----
+sudo dnf search openjdk
+sudo dnf search openjdk | grep 1.8
+sudo dnf install java-1.8.0-openjdk-devel.x86_64
+sudo dnf install java-1.8.0-openjdk-src.x86_64
+----
+
+
+== How to install Docker on Fedora
+https://docs.docker.com/install/linux/docker-ce/fedora/
