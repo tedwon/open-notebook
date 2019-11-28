@@ -1,0 +1,10 @@
+== Chrome Search Hack
+Go to chrome://settings/searchEngines in Google Chrome web browser
+Add Search engine, Keyword and Query URL in other
+
+* Example:
+----
+Search engine: tedwon.atlassian.net
+Keyword: tedwon
+URL: https://tedwon.atlassian.net/wiki/dosearchsite.action?queryString=%s
+----
