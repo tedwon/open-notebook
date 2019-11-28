@@ -1,8 +1,16 @@
 = On Fedora Workstation
 
+== Keyboard Shorcuts for Fedora
+* Fedora GNOME Keyboard Shortcuts
+**https://kinesis-ergo.com/support/advantage2/
+
+
+=== Close window
+* Super + Q
+
 == How to take screenshots
 * Go to search bar
-* Find screenshot
+* Find screenshotP
 
 
 == Fedora Productivity Tools
@@ -11,6 +19,13 @@
 * https://www.dedoimedo.com/computers/gnome-customization.html
 * https://www.dedoimedo.com/computers/gnome-edit-theme.html
 * https://gitlab.com/LinxGem33/Arc-Menu
+
+
+== How to install Dash to Dock on Fedora
+* https://www.dedoimedo.com/computers/gnome-3-dash-to-panel.html
+* https://extensions.gnome.org/extension/307/dash-to-dock/
+** Need to open by FireFox, not Chrome to install
+*** Chrome: "You can see "We cannot detect a running copy of GNOME on this system, so some parts of the interface may be disabled. See our troubleshooting entry for more information."
 
 
 == How to change the color of your Linux terminal | Opensource.com
