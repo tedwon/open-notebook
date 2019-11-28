@@ -44,3 +44,12 @@ sudo dnf install java-1.8.0-openjdk-src.x86_64
 
 == How to install Docker on Fedora
 https://docs.docker.com/install/linux/docker-ce/fedora/
+
+
+== How to record output sound on Fedora
+* 일단 내 목소리 빼고 녹음하는데 성공! 아래 링크를 따라서 실행한다.
+* https://www.addictivetips.com/ubuntu-linux-tips/record-speaker-output-on-linux/
+** sudo dnf install pavucontrol audacity 설치하고
+** “Pavu Control” and “Audacity” 앱 실행하고
+** “Pavu Control” 의 Configuration 메뉴에서 Output 으로 선택하고
+** “Audacity” 에서 record 버튼 클릭하면 끝!
