@@ -1,8 +1,86 @@
 = On Fedora Workstation
 
+
+== How to reboot Fedora from command line
+[source,bash]
+----
+sudo reboot
+
+or
+
+systemctl reboot -i
+----
+
+
+== How to disable Tracker on Fedora
+* Search를 위한 indexing 작업이 cpu를 소모하므로 disable 시키자.
+* https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html
+* Settings -> Search 로 가서 화면 맨위에 버튼을 disable 시키자.
+** 그래도 안되서 강제 disable
+----
+systemctl --user mask tracker-store.service tracker-miner-fs.service tracker-miner-rss.service tracker-extract.service tracker-miner-apps.service tracker-writeback.service
+
+tracker reset --hard
+
+~~~
+Unit tracker-miner-apps.service does not exist, proceeding anyway.
+Created symlink /home/jwon/.config/systemd/user/tracker-store.service → /dev/null.
+Created symlink /home/jwon/.config/systemd/user/tracker-miner-fs.service → /dev/null.
+Created symlink /home/jwon/.config/systemd/user/tracker-miner-rss.service → /dev/null.
+Created symlink /home/jwon/.config/systemd/user/tracker-extract.service → /dev/null.
+Created symlink /home/jwon/.config/systemd/user/tracker-miner-apps.service → /dev/null.
+Created symlink /home/jwon/.config/systemd/user/tracker-writeback.service → /dev/null.
+CAUTION: This process may irreversibly delete data.
+Although most content indexed by Tracker can be safely reindexed, it can’t be assured that this is the case for all data. Be aware that you may be incurring in a data loss situation, proceed at your own risk.
+
+Are you sure you want to proceed? [y|N]: y
+Found 2 PIDs…
+  Killed process 2696 — “tracker-miner-fs”
+  Killed process 2704 — “tracker-extract”
+_g_io_module_get_default: Found default implementation dconf (DConfSettingsBackend) for ‘gsettings-backend’
+Setting database locations
+Checking database directories exist
+Checking database version
+Checking whether database files exist
+Removing all database/storage files
+  Removing database:'/home/jwon/.cache/tracker/meta.db'
+  Removing db-locale file:'/home/jwon/.cache/tracker/db-locale.txt'
+  Removing journal:'/home/jwon/.local/share/tracker/data/tracker-store.journal'
+  Removing db-version file:'/home/jwon/.cache/tracker/db-version.txt'
+~~~
+
+그리고 reboot
+----
+* 다시 enable 하고 싶으면
+----
+systemctl --user unmask tracker-store.service tracker-miner-fs.service tracker-miner-rss.service tracker-extract.service tracker-miner-apps.service tracker-writeback.service
+
+그리고 reboot
+----
+
+
+== High CPU tracker-miner-fs on Fedora
+* file search를 위한 indexing 작업 수행
+* https://askbot.fedoraproject.org/en/question/9822/how-do-i-disable-tracker-in-gnome/
+* Disable 하려면
+----
+gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+----
+
+* https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html
+
+
+== How to maximize a window
+* Super + upper key
+
+
+== How to move application windows across screens
+* Super + Shift + <- or
+
+
 == Keyboard Shorcuts for Fedora
 * Fedora GNOME Keyboard Shortcuts
-**https://kinesis-ergo.com/support/advantage2/
+** https://kinesis-ergo.com/support/advantage2/
 
 
 === Close window
@@ -44,6 +122,10 @@ sudo dnf install java-1.8.0-openjdk-src.x86_64
 
 == How to install Docker on Fedora
 https://docs.docker.com/install/linux/docker-ce/fedora/
+
+----
+sudo systemctl start docker
+----
 
 
 == How to record output sound on Fedora
