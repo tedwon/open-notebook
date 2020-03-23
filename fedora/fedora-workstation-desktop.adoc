@@ -1,6 +1,24 @@
 = On Fedora Workstation
 
 
+https://www.reddit.com/r/Fedora/comments/3udmf9/sleep_and_hibernation/
+https://extensions.gnome.org/extension/826/suspend-button/
+
+* To suspend from the CLI: systemctl suspend
+* To susped from the GUI: Hold <Alt> when the top-right menu is open
+
+
+== Change window in main screen
+Ctrl + Alt + up/down
+
+
+== How to shutdonw Fedora from command line
+[source,bash]
+----
+systemctl poweroff -i
+----
+
+
 == How to reboot Fedora from command line
 [source,bash]
 ----
