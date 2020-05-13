@@ -5,8 +5,8 @@
 https://www.graalvm.org/
 
 * GraalVM is a universal virtual machine
-** for running applications written in 
-*** JavaScript, Python, Ruby, R, 
+** for running applications written in
+*** JavaScript, Python, Ruby, R,
 *** JVM-based languages like Java, Scala, Groovy, Kotlin, Clojure, and
 *** LLVM-based languages such as C and C++.
 
@@ -34,3 +34,7 @@ Introduce GraalVM from Oracle engineer, Taewan Kim
 
 == Learning to Use the GraalVM - DZone Java
 * https://dzone.com/articles/learning-to-use-the-graalvm
+
+
+== Microservices: Quarkus vs. Spring Boot - DZone Microservices
+https://dzone.com/articles/microservices-quarkus-vs-spring-boot
