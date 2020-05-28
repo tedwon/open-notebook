@@ -1,0 +1,19 @@
+== Java SE Security
+* https://www.oracle.com/java/technologies/javase/javase-tech-security.html
+
+
+== JAAS
+* Java Authentication and Authorization Service (JAAS)
+** Identity and Access Management
+* JAAS, pronounced "Jazz"
+* https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html
+* https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service
+** JAAS는 자바 프로그래밍 언어의 보안 프레임워크이다. 자바 런타임 환경 1.4 이후로 JAAS는 JRE에 통합되었다. 한때 JAAS는 썬에 의해 확장 라이브러리로 배포되었다.
+
+
+== Implementations
+https://www.keycloak.org/
+
+http://www.picketlink.org/
+
+https://picketbox.jboss.org/

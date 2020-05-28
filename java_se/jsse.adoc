@@ -1,0 +1,6 @@
+== JSSE - Java Secure Socket Extension
+https://en.wikipedia.org/wiki/Java_Secure_Socket_Extension
+
+
+== 8 Java Secure Socket Extension (JSSE) Reference Guide
+https://docs.oracle.com/javase/9/security/java-secure-socket-extension-jsse-reference-guide.htm#JSSEC-GUID-93DEEE16-0B70-40E5-BBE7-55C3FD432345
