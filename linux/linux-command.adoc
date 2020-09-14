@@ -1,0 +1,16 @@
+== explainshell.com - match command-line arguments to their help text
+https://explainshell.com/
+
+
+== How to extract tar.gz?
+[source,bash,options="nowrap"]
+----
+$ tar -zxvf <FILE>.tar.gz
+----
+
+
+== How to extract tar.gz to target directory?
+[source,bash,options="nowrap"]
+----
+$ tar -zxvf <FILE>.tar.gz -C <TARGET_DIR>
+----

@@ -1,5 +1,8 @@
 = On Fedora Workstation
 
+sudo livecd-iso-to-disk --format --reset-mbr Fedora-Workstation-Live-x86_64-32-1.6.iso /dev/sdb1
+
+
 
 https://www.reddit.com/r/Fedora/comments/3udmf9/sleep_and_hibernation/
 https://extensions.gnome.org/extension/826/suspend-button/
