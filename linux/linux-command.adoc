@@ -13,4 +13,6 @@ $ tar -zxvf <FILE>.tar.gz
 [source,bash,options="nowrap"]
 ----
 $ tar -zxvf <FILE>.tar.gz -C <TARGET_DIR>
+
+$ tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
 ----

@@ -1,0 +1,22 @@
+== How to install PostgreSQL on Fedora 32
+[source,bash,options="nowrap"]
+----
+sudo dnf -y install postgresql postgresql-server
+sudo passwd postgres
+postgres
+
+sudo /usr/bin/postgresql-setup initdb
+
+systemctl enable postgresql.service
+systemctl start postgresql.service
+
+su - postgres
+Password: postgres
+[postgres@sara ~]$ psql
+ALTER USER postgres PASSWORD 'postgres';
+
+systemctl restart postgresql
+
+psql -h 127.0.0.1 -p 5432 -U postgres
+postgres
+----
