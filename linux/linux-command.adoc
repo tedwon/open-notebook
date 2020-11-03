@@ -16,3 +16,29 @@ $ tar -zxvf <FILE>.tar.gz -C <TARGET_DIR>
 
 $ tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
 ----
+
+
+== How to extract tar.xz?
+[source,bash,options="nowrap"]
+----
+xz -d tsetup.2.4.4.tar.xz
+tar xf tsetup.2.4.4.tar
+----
+
+
+== How to zip a directory recursively
+[source,bash,options="nowrap"]
+----
+zip -r <ZIP_FILE_NAME>.zip <DIRECTORY_NAME>
+----
+
+
+== Downloading files with curl
+http://www.compciv.org/recipes/cli/downloading-with-curl/
+
+[source,bash,options="nowrap"]
+----
+curl http://some.url --output some.file
+
+curl https://download.jboss.org/wildfly/21.0.0.Final/wildfly-21.0.0.Final.zip --output wildfly-21.0.0.Final.zip
+----

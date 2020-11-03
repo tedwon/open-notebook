@@ -164,3 +164,13 @@ sudo systemctl start docker
 ** “Pavu Control” and “Audacity” 앱 실행하고
 ** “Pavu Control” 의 Configuration 메뉴에서 Output 으로 선택하고
 ** “Audacity” 에서 record 버튼 클릭하면 끝!
+
+
+== Set up Printers
+
+=== For All
+https://redhat.service-now.com/help?id=kb_article_view&sysparm_article=KB0004636&sys_kb_id=a11b19681b94ac10df470f69cc4bcb75#GettingStarted
+
+
+=== For Fedora
+https://redhat.service-now.com/help?id=kb_article_view&sysparm_article=KB0004651&sys_kb_id=e03697661b40a01040d63267cc4bcb0c

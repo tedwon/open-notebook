@@ -1,7 +1,6 @@
 :toc:
 
 == GraalVM
-
 https://www.graalvm.org/
 
 * GraalVM is a universal virtual machine
@@ -9,6 +8,17 @@ https://www.graalvm.org/
 *** JavaScript, Python, Ruby, R,
 *** JVM-based languages like Java, Scala, Groovy, Kotlin, Clojure, and
 *** LLVM-based languages such as C and C++.
+
+
+== Mandrel
+https://github.com/graalvm/mandrel
+----
+Mandrel is a downstream distribution of the GraalVM community edition.
+
+Mandrel's main goal is to provide a native-image release specifically to support Quarkus.
+
+The aim is to align the native-image capabilities from GraalVM with OpenJDK and Red Hat Enterprise Linux libraries to improve maintainability for native Quarkus applications.
+----
 
 
 == Quarkus Demo
