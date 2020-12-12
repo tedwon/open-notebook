@@ -174,3 +174,7 @@ https://redhat.service-now.com/help?id=kb_article_view&sysparm_article=KB0004636
 
 === For Fedora
 https://redhat.service-now.com/help?id=kb_article_view&sysparm_article=KB0004651&sys_kb_id=e03697661b40a01040d63267cc4bcb0c
+
+
+== Brisbane office Printers
+http://cups.bne.redhat.com:631/printers/
