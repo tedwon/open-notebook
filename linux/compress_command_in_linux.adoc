@@ -1,0 +1,37 @@
+== How to create tar.gz? / How to compress a directory to tar.gz?
+[source,bash,options="nowrap"]
+----
+$ tar -czvf <FILE>.tar.gz <TARGET_DIRECTORY>
+----
+
+
+== How to extract tar.gz?
+[source,bash,options="nowrap"]
+----
+$ tar -zxvf <FILE>.tar.gz
+----
+
+
+== How to extract tar.gz to target directory?
+[source,bash,options="nowrap"]
+----
+$ mkdir <TARGET_DIR>
+$ tar -zxvf <FILE>.tar.gz -C <TARGET_DIR>
+
+$ tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
+----
+
+
+== How to extract tar.xz?
+[source,bash,options="nowrap"]
+----
+xz -d tsetup.2.4.4.tar.xz
+tar xf tsetup.2.4.4.tar
+----
+
+
+== How to zip a directory recursively
+[source,bash,options="nowrap"]
+----
+zip -r <ZIP_FILE_NAME>.zip <DIRECTORY_NAME>
+----

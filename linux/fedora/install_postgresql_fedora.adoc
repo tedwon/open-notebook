@@ -23,8 +23,11 @@ postgres
 ----
 
 
-== To set up a PostgreSQL database with Docker:
+== Uninstal PostgreSQL Server
+sudo dnf -y remove postgresql postgresql-server
 
+
+== To set up a PostgreSQL database with Docker:
 https://github.com/quarkusio/quarkus-quickstarts/tree/master/hibernate-orm-quickstart#prepare-a-postgresql-instance
 
 sudo systemctl start docker
@@ -32,3 +35,78 @@ docker run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 --name qua
 
 
 podman run --ulimit memlock=-1:-1 -it --rm=true --memory-swappiness=0 --name quarkus_test -e POSTGRES_USER=quarkus_test -e POSTGRES_PASSWORD=quarkus_test -e POSTGRES_DB=quarkus_test -p 5432:5432 postgres:10.5
+
+
+== How to view PostgreSQL version
+[source,bash,options="nowrap"]
+----
+postgres -V
+
+locate bin/postgres
+
+/usr/lib/postgresql/9.3/bin/postgres -V
+----
+
+
+== How To Install a Specific Version of PostgreSQL - 9.5.24
+https://access.redhat.com/documentation/en-us/red_hat_jboss_operations_network/3.3/html-single/installation_guide/#Database-Postgres_Preparation
+
+* go to: https://yum.postgresql.org/rpmchart.php and download the postgresql, postgresql-server and postgresql-libs RPM packages and install via yum from the download directory. For example:
+
+=== postgresql95-9.5.24-1PGDG.f32.x86_64.rpm
+https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-32-x86_64/postgresql95-9.5.24-1PGDG.f32.x86_64.rpm
+
+=== postgresql95-libs-9.5.24-1PGDG.f32.x86_64.rpm
+https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-32-x86_64/postgresql95-libs-9.5.24-1PGDG.f32.x86_64.rpm
+
+=== postgresql95-server-9.5.24-1PGDG.f32.x86_64.rpm
+https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-32-x86_64/postgresql95-server-9.5.24-1PGDG.f32.x86_64.rpm
+
+[source,options="nowrap"]
+-----
+sudo dnf install -y ./postgresql95-9.5.24-1PGDG.f32.x86_64.rpm ./postgresql95-libs-9.5.24-1PGDG.f32.x86_64.rpm ./postgresql95-server-9.5.24-1PGDG.f32.x86_64.rpm
+
+sudo /usr/pgsql-9.5/bin/postgresql95-setup initdb
+
+sudo systemctl enable postgresql-9.5.service
+sudo systemctl start postgresql-9.5.service
+
+su - postgres
+Password: postgres
+[postgres@sara ~]$ psql
+/usr/pgsql-9.5/bin/psql
+
+ALTER USER postgres PASSWORD 'postgres';
+
+systemctl restart postgresql-9.5
+
+# test
+psql -h 127.0.0.1 -p 5432 -U postgres
+postgres
+/usr/pgsql-9.5/bin/psql -h 127.0.0.1 -p 5432 -U postgres -W postgres
+
+
+postgres=# CREATE USER rhqadmin PASSWORD 'rhqadmin';
+
+CREATE DATABASE rhq OWNER rhqadmin;
+
+SHOW hba_file;
+/var/lib/pgsql/9.5/data/pg_hba.conf
+
+sudo code /var/lib/pgsql/9.5/data/pg_hba.conf --user-data-dir
+
+systemctl restart postgresql-9.5
+
+
+sudo code /var/lib/pgsql/data/postgresql.conf --user-data-dir
+listen_addresses = '*'
+
+
+su - postgres
+/usr/pgsql-9.5/bin/psql
+ALTER USER rhqadmin SET statement_timeout=0;
+
+
+/usr/pgsql-9.5/bin/psql -h localhost -p 5432 rhq -U rhqadmin
+
+----
