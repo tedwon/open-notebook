@@ -1,0 +1,90 @@
+== explainshell.com - match command-line arguments to their help text
+https://explainshell.com/
+
+
+== Restart Linux Servers
+[source,bash,options="nowrap"]
+----
+sudo -i
+
+shutdown -r now
+
+reboot
+
+systemctl reboot -i
+----
+
+
+== How to Check Memory Usage Per Process on Linux
+[source,bash,options="nowrap"]
+----
+pmap 1370 | tail -n 1 | awk '/[0-9]K/{print $2}'
+4357552K
+
+ps -ef | grep koala | awk '{print $2}' | xargs pmap | tail -n 1 | awk '/[0-9]K/{print $2}'
+108096K
+
+watch "pmap 1370 | tail -n 1"
+
+pmap 1370 | tail -n 1
+
+pmap 1370 | grep total
+----
+
+
+== How to count files
+[source,bash,options="nowrap"]
+----
+find . -type f | wc -l
+----
+
+
+== Downloading files with curl
+http://www.compciv.org/recipes/cli/downloading-with-curl/
+
+[source,bash,options="nowrap"]
+----
+curl http://some.url --output some.file
+
+curl https://download.jboss.org/wildfly/21.0.0.Final/wildfly-21.0.0.Final.zip --output wildfly-21.0.0.Final.zip
+----
+
+
+== How to measure response time by using curl
+[source,bash,options="nowrap"]
+----
+curl -s -o /dev/null -w  "%{time_starttransfer}\n" www.google.com
+0.299664
+
+curl -s -o /dev/null -w  "%{time_starttransfer}\n" https://translate.google.com/?sl=en&tl=ko&text=intent%0A&op=translate
+0.561048
+
+curl -s -o /dev/null -w  "%{time_starttransfer}\n" https://learnersdictionary.com/definition/intent
+1.544010
+----
+
+
+== How to check available update versions
+[source,bash,options="nowrap"]
+----
+sudo dnf check-update
+
+yum check-update
+----
+
+== netstat
+[source,bash,options="nowrap"]
+----
+netstat -anop | grep 7080
+
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+tcp6       0      0 :::7080                 :::*                    LISTEN      53260/java           off (0.00/0/0)
+----
+
+
+== watch
+[source,bash,options="nowrap"]
+----
+watch -n 1.0 podman ps
+----

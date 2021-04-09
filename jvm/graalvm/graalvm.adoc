@@ -48,3 +48,19 @@ Introduce GraalVM from Oracle engineer, Taewan Kim
 
 == Microservices: Quarkus vs. Spring Boot - DZone Microservices
 https://dzone.com/articles/microservices-quarkus-vs-spring-boot
+
+
+== Native Clojure with GraalVM
+https://www.innoq.com/en/blog/native-clojure-and-graalvm/
+
+
+== Build Java / Jar as a native image
+https://www.graalvm.org/docs/getting-started/#native-images
+
+https://www.graalvm.org/reference-manual/native-image/#build-a-native-image
+
+----
+mvn clean install
+cd dist
+native-image -jar ../target/alpaca-1.0.0.Final.jar
+----

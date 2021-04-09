@@ -1,0 +1,19 @@
+== How to kill all Java processes
+----
+jps | grep koala | awk '{print $1}' | xargs kill -9
+
+jps -l | grep koala | awk '{print $1}' | xargs kill -15
+
+jps -mlvV | grep koala | awk '{print $1}' | xargs kill -15
+
+
+ps -ef | grep java | grep -v grep | awk '{print $2}' | xargs kill -9
+   
+jps | awk '{print $1}' | xargs kill -9
+ 
+kill -9 `ps -ef | grep java | grep -v grep | awk '{print $2}'`
+  
+kill -9 `jps | awk '{print $2}'`
+  
+su -c 'killall -9 java'
+----

@@ -151,9 +151,18 @@ sudo dnf install java-1.8.0-openjdk-src.x86_64
 
 == How to install Docker on Fedora
 https://docs.docker.com/install/linux/docker-ce/fedora/
-
+[source,sh,options="nowrap"]
 ----
 sudo systemctl start docker
+----
+
+
+== How to delete all images
+[source,sh,options="nowrap"]
+----
+podman rmi $(podman images -qa) -f
+
+docker rmi $(docker images -q) -f
 ----
 
 
@@ -178,3 +187,12 @@ https://redhat.service-now.com/help?id=kb_article_view&sysparm_article=KB0004651
 
 == Brisbane office Printers
 http://cups.bne.redhat.com:631/printers/
+
+
+== How to fix broken Korean in VSCode
+* https://translate.google.com/translate?hl=&sl=ko&tl=en&u=https%3A%2F%2Fmemo.polypia.net%2Farchives%2F3204
+* Remove 'Droid Sans Fallback' from font family in VSCode setting.
+
+
+== Install Apache HTTPD on Fedora
+https://www.liquidweb.com/kb/how-to-install-apache-on-fedora-21/

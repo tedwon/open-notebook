@@ -1,0 +1,13 @@
+== Quarkus - Building a Native Executable
+https://quarkus.io/guides/building-native-image
+
+
+=== Create a native executable
+[source,bash,options="nowrap"]
+----
+./mvnw -DskipTests clean package -Pnative
+----
+
+
+== Quarkus - Tips for writing native applications
+https://quarkus.io/guides/writing-native-applications-tips

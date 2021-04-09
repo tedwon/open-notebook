@@ -1,0 +1,23 @@
+== How to monitor network traffic in linux
+
+=== nethogs
+I like nethogs best among similar commands.
+
+[source,bash,options="nowrap"]
+----
+$ sudo nethogs
+
+NetHogs version 0.8.6
+
+    PID USER     PROGRAM                                                                                      DEV         SENT      RECEIVED      
+      ? root     unknown TCP                                                                                              0.000       0.000 KB/sec
+
+  TOTAL                                                                                                                   0.498      16.119 KB/sec
+----
+
+
+=== bmon
+[source,bash,options="nowrap"]
+----
+$ bmon
+----

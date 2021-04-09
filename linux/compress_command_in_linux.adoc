@@ -22,6 +22,13 @@ $ tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
 ----
 
 
+== How to compress a directory/file to tar.xz?
+[source,bash,options="nowrap"]
+----
+tar -cJf <archive.tar.xz> <files>
+----
+
+
 == How to extract tar.xz?
 [source,bash,options="nowrap"]
 ----
@@ -34,4 +41,45 @@ tar xf tsetup.2.4.4.tar
 [source,bash,options="nowrap"]
 ----
 zip -r <ZIP_FILE_NAME>.zip <DIRECTORY_NAME>
+----
+
+
+== How to compress a directory/file to tar.bz2? 
+[source,bash,options="nowrap"]
+----
+tar -cjvf <NAME>.tar.bz2 <TARGET_DIR>
+
+tar -cjf <NAME>.tar.bz2 <TARGET_FILENAME>
+----
+
+== How to extract/decompress tar.bz2
+[source,bash,options="nowrap"]
+----
+bzip2 -d filename.bz2
+
+bzip2 -d <NAME>.tar.bz2
+
+tar -xvf <NAME>.tar
+----
+
+== Compress files with tar at the shell prompt
+
+=== For archiving files at the shell prompt
+[source,bash,options="nowrap"]
+----
+tar -cvf fileName.tar file1 file2 file3
+tar -cvf fileName.tar dir1 dir2 dir3
+tar -cvf fileName.tar file1 dir1
+----
+
+=== To list the contents of a tar file
+[source,bash,options="nowrap"]
+----
+tar tf fileName.tar
+----
+
+=== To extract the contents of a tar file
+[source,bash,options="nowrap"]
+----
+$ tar -xvf docs.tar
 ----

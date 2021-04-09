@@ -1,0 +1,38 @@
+== How to create a tag in Git
+[source,bash,options="nowrap"]
+----
+# Create Tag with Message
+$ git tag -a v1.0 -m "New release for v1.0"
+
+
+# Push your created tags
+$ git push --tags
+----
+
+
+== How to create a new branch in Git
+[source,bash,options="nowrap"]
+----
+$ git checkout -b develop
+
+$ git branch develop
+----
+
+
+== How to push new branch in Git
+[source,bash,options="nowrap"]
+----
+$ git config --global push.default simple
+$ git push --set-upstream origin develop
+----
+
+
+== How to delete branch
+[source,bash,options="nowrap"]
+----
+# delete branch locally
+$ git branch -d localBranchName
+
+# delete branch remotely
+$ git push origin --delete remoteBranchName
+----

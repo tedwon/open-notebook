@@ -1,0 +1,6 @@
+== Releases · graalvm/mandrel
+https://github.com/graalvm/mandrel/releases
+
+
+== Quarkus - Building a Native Executable
+https://quarkus.io/guides/building-native-image#prerequisites-for-mandrel
