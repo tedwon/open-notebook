@@ -25,7 +25,7 @@ $ tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz
 == How to compress a directory/file to tar.xz?
 [source,bash,options="nowrap"]
 ----
-tar -cJf <archive.tar.xz> <files>
+tar -cJf <archive_name>.tar.xz <files>/<directory>
 ----
 
 
@@ -44,7 +44,7 @@ zip -r <ZIP_FILE_NAME>.zip <DIRECTORY_NAME>
 ----
 
 
-== How to compress a directory/file to tar.bz2? 
+== How to compress a directory/file to tar.bz2?
 [source,bash,options="nowrap"]
 ----
 tar -cjvf <NAME>.tar.bz2 <TARGET_DIR>

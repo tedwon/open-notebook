@@ -1,0 +1,36 @@
+== explainshell.com - match command-line arguments to their help text
+https://explainshell.com/
+
+
+== How to measure response time by using curl
+[source,bash,options="nowrap"]
+----
+curl -s -o /dev/null -w  "%{time_starttransfer}\n" www.google.com
+----
+
+
+$ curl -k --compressed "<URL>"
+
+
+== Examples
+[source,bash,options="nowrap"]
+----
+curl -X GET "http://localhost:7080/koala/meeting/now" -H  "accept: text/plain"
+
+curl -v -X POST "http://127.0.0.1:8080/sample/test.html" -H  "accept: text/plain"
+
+curl -vX POST "http://127.0.0.1:8080/sample/test.html" -H  "accept: text/plain"
+
+$ curl -L $MYSYSTEM/api/v1/products
+----
+
+
+== Download files from URL
+[source,bash,options="nowrap"]
+----
+curl http://URL/a.zip  --output a.zip
+
+curl -O http://example.com/download/myfile.zip
+
+curl -o localname.zip http://example.com/download/myfile.zip
+----

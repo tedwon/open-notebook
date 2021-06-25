@@ -10,7 +10,7 @@ https://www.graalvm.org/
 *** LLVM-based languages such as C and C++.
 
 
-== Mandrel
+== Mandrel 맨드럴
 https://github.com/graalvm/mandrel
 ----
 Mandrel is a downstream distribution of the GraalVM community edition.

@@ -1,0 +1,15 @@
+== explainshell.com - match command-line arguments to their help text
+https://explainshell.com/
+
+
+== Restart Linux Servers
+[source,bash,options="nowrap"]
+----
+sudo -i
+
+shutdown -r now
+
+reboot
+
+systemctl reboot -i
+----

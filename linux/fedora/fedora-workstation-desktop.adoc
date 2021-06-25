@@ -104,7 +104,7 @@ gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
 
 
 == How to move application windows across screens
-* Super + Shift + <- or
+* Super + Shift + left/right arrow key
 
 
 == Keyboard Shorcuts for Fedora
@@ -162,6 +162,7 @@ sudo systemctl start docker
 ----
 podman rmi $(podman images -qa) -f
 
+sudo systemctl start docker
 docker rmi $(docker images -q) -f
 ----
 

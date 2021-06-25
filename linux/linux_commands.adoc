@@ -2,19 +2,6 @@
 https://explainshell.com/
 
 
-== Restart Linux Servers
-[source,bash,options="nowrap"]
-----
-sudo -i
-
-shutdown -r now
-
-reboot
-
-systemctl reboot -i
-----
-
-
 == How to Check Memory Usage Per Process on Linux
 [source,bash,options="nowrap"]
 ----
