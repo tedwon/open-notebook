@@ -197,3 +197,27 @@ http://cups.bne.redhat.com:631/printers/
 
 == Install Apache HTTPD on Fedora
 https://www.liquidweb.com/kb/how-to-install-apache-on-fedora-21/
+
+
+== Install sshd on Fedora
+https://bytefreaks.net/gnulinux/fedora-25-install-start-enable-ssh-server
+
+[source,bash]
+----
+sudo dnf install -y openssh-server;
+
+sudo systemctl start sshd
+----
+
+
+== How to check Fedora version in terminal
+[source,bash]
+----
+cat /etc/fedora-release
+----
+
+
+== How to use cron on Fedora
+https://fedoramagazine.org/scheduling-tasks-with-cron/
+
+grep "cronscript.php" /var/log/cron
