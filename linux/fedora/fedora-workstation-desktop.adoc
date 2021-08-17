@@ -16,7 +16,11 @@ https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/
 
 [source,bash]
 ----
-sudo dnf system-upgrade download --releasever=34 --allowerasing
+sudo dnf upgrade --refresh -y
+
+sudo dnf install dnf-plugin-system-upgrade -y
+
+sudo dnf system-upgrade download --releasever=34 -y --allowerasing
 ----
 
 
