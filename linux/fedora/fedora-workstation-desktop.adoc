@@ -112,8 +112,10 @@ gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
 ** https://kinesis-ergo.com/support/advantage2/
 
 
-=== Close window
+=== Close App/Window
+* left ctrl + Q
 * Super + Q
+
 
 == How to take screenshots
 * Go to search bar
