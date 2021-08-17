@@ -11,8 +11,19 @@ https://extensions.gnome.org/extension/826/suspend-button/
 * To susped from the GUI: Hold <Alt> when the top-right menu is open
 
 
+== How to upgrade Fedora version in command line
+https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/
+
+[source,bash]
+----
+sudo dnf system-upgrade download --releasever=34 --allowerasing
+----
+
+
+
 == How to install podman on Fedora
 https://podman.io/getting-started/installation.html
+
 [source,bash]
 ----
 sudo yum -y install podman
