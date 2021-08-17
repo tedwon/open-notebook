@@ -33,6 +33,26 @@ sudo dnf system-upgrade reboot
 sudo dnf system-upgrade clean
 
 sudo dnf clean packages
+
+sudo dnf install rpmconf
+
+sudo rpmconf -a
+
+sudo dnf repoquery --unsatisfied
+
+sudo dnf repoquery --duplicates
+
+sudo dnf list extras
+
+sudo dnf remove $(sudo dnf repoquery --extras --exclude=kernel,kernel-\*)
+
+sudo dnf autoremove
+
+sudo dnf install symlinks
+
+sudo symlinks -r /usr | grep dangling
+
+sudo symlinks -r -d /usr
 ----
 
 
