@@ -21,6 +21,7 @@ sudo dnf upgrade --refresh -y
 sudo dnf install dnf-plugin-system-upgrade -y
 
 sudo dnf system-upgrade download --releasever=34 -y --allowerasing
+sudo dnf system-upgrade download --releasever=33 -y --allowerasing
 
 Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
 Download complete! Use 'dnf system-upgrade reboot' to start the upgrade.
@@ -159,8 +160,9 @@ gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
 ** https://kinesis-ergo.com/support/advantage2/
 
 
-=== Close App/Window
-* left ctrl + Q
+=== Quit/Close App/Window
+* Alt + F4 & repeat
+* left Ctrl + Q
 * Super + Q
 
 
